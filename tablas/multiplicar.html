@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabla del 3</title>
+  <link rel="stylesheet" href="multiplicar.css">
+  <script src="multiplicar.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <button class="btn-probar" onclick="generarTablas()">PROBAR</button>
+        <button class="btn-primary" onclick="modoPractica()">Modo práctica</button>
+        <button class="btn-primary" onclick="validarRespuestas()">Validar</button>
+</header >  
+
+ 
+  <div class="contenedor" id="contenedorTabla">
+
+    <!-- Toggle oculto (interacción sin JS) -->
+    <input type="checkbox" id="modo" hidden>
+
+    <!-- Botón PROBAR reutilizado como activador -->
+    <label for="modo" class="btn-probar">PROBAR</label>
+
+    <h1>Tabla del 3</h1>
+
+    <input type="number" id="numero" placeholder="Escribe un número">
+
+    <table>
+      <tr><td>3 x 1</td><td>=</td><td class="resultado">3</td></tr>
+      <tr><td>3 x 2</td><td>=</td><td class="resultado">6</td></tr>
+      <tr><td>3 x 3</td><td>=</td><td class="resultado">9</td></tr>
+      <tr><td>3 x 4</td><td>=</td><td class="resultado">12</td></tr>
+      <tr><td>3 x 5</td><td>=</td><td class="resultado">15</td></tr>
+      <tr><td>3 x 6</td><td>=</td><td class="resultado">18</td></tr>
+      <tr><td>3 x 7</td><td>=</td><td class="resultado">21</td></tr>
+      <tr><td>3 x 8</td><td>=</td><td class="resultado">24</td></tr>
+      <tr><td>3 x 9</td><td>=</td><td class="resultado">27</td></tr>
+      <tr><td>3 x 10</td><td>=</td><td class="resultado">30</td></tr>
+    </table>
+
+  </div>
+
+</body>
+</html>

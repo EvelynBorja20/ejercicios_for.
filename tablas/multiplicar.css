@@ -1,0 +1,162 @@
+:root {
+  --primary: #2563eb;
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #e5e7eb;
+  --accent: #22c55e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: var(--text);
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 8%;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-weight: bold;
+}
+
+/* BOTÓN */
+.btn-primary {
+  background: var(--primary);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px var(--primary);
+}
+
+/* SWITCH */
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  width: 40px;
+  height: 20px;
+  background: #374151;
+  border-radius: 20px;
+  position: relative;
+}
+
+.slider::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: white;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+
+
+
+input:checked + .slider::before {
+  transform: translateX(20px);
+  background: var(--accent);
+}
+
+/* MAIN */
+.main {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.descripcion {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #9ca3af;
+}
+
+/* TABLA */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s;
+}
+
+/* HOVER INTERACTIVO */
+.tabla tr:hover {
+  background: rgba(37, 99, 235, 0.2);
+  transform: scale(1.02);
+}
+
+/* RESULTADO OCULTO EN MODO PRÁCTICA */
+.resultado {
+  transition: 0.3s;
+}
+
+/* ACTIVAR MODO PRÁCTICA */
+#modo:checked ~ .main .resultado {
+  color: transparent;
+}
+
+/* MOSTRAR AL PASAR EL MOUSE */
+#modo:checked ~ .main tr:hover .resultado {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main {
+    padding: 20px;
+  }
+}
